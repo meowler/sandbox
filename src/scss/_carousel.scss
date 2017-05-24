@@ -1,0 +1,46 @@
+.background {
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.slick-dots {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    
+    li button &:before {
+        font-size: 10px;        
+    }
+
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots li button:before {
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        opacity: .5;
+        color: white;
+        @extend %fa-square-o;              
+}
+
+.slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: white;
+        @extend %fa-square;
+    }

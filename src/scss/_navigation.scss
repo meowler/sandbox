@@ -1,0 +1,165 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navbar.navbar-default {
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 1% 2%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    
+    
+    &:before {
+        display: none;
+    }
+    
+    &:after {
+        display: none;
+    }
+
+    .navbar-brand {
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-directon: row;
+        align-items: center;
+        color: $brand-yellow;
+        
+        > div img {
+            max-width: 100%;
+            height: 75px;
+        }
+    }
+}
+
+/*  NAV ICON */
+
+.menu-icon {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    margin: 1em 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    
+    span {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: $brand-yellow;
+        border-radius: 5px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        
+        &:nth-child(1) {
+            top: 0px;
+        }
+        
+        &:nth-child(2) {
+            top: 10px;
+        }
+        
+        &:nth-child(3) {
+            top: 20px;
+        }
+        
+    }
+}
+
+.menu-icon.open {
+    span {
+        background: white;
+        
+        &:nth-child(1) {
+            top: 10px;
+            transform: rotate(-45deg);
+        }
+        
+        &:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+            left: 50%;
+        }
+        
+        &:nth-child(3) {
+            top: 10px;
+            transform: rotate(45deg);
+        }
+    }
+    
+}
+
+.menu-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: right;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+    overflow-x: hidden;
+    transition: 0.125s;
+    display: flex;
+    justify-content: center;
+    
+    ul {
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 9em 0;
+        
+        li {
+            color: $brand-yellow;
+            
+            a {
+                font-size: 5em;
+                font-weight: 700;
+                color: $brand-yellow;
+                
+                &:hover {
+                    text-decoration: none;
+                    color: white;
+                }
+                
+                &:active {
+                    text-decoration: none;
+                    color: $brand-yellow;
+                }
+                
+                &:link {
+                    text-decoration: none;
+                }
+                
+            }
+        }
+    }
+}
+
+.menu-overlay.open {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-overlay.open + .container .navbar.navbar-default {
+    background: transparent;
+}
+
+.menu-overlay.open + .container .wrapper.carousel {
+    filter: blur(3px);
+}

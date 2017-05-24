@@ -1,0 +1,54 @@
+%btn {
+    text-transform: uppercase;
+    font-weight: $btn-font-weight;
+    border: 2px solid #000;
+    font-family: $btn-font-family;
+    font-size: 1.313em;
+}
+
+%btn-default {
+    color: white;
+    border-color: $btn-default-color;
+    
+    &:hover,
+    &:visited,
+    &:focus,
+    &%focus {
+      color: white;
+      text-decoration: none;
+    }
+}
+
+%btn-primary {
+    color: $gray-dark;
+    
+    &:visited {
+        color: $gray-dark; 
+        border-color: $gray-dark; 
+    }
+    
+    &:hover,
+    &:focus,
+    &%focus {
+        color: $brand-primary;
+        border-color: $brand-primary;
+        text-decoration: none;
+    }
+    
+    
+}
+
+%btn-blue {
+    color: $btn-blue-color;
+    border-color: $btn-blue-border;
+}
+
+%btn-action {
+    color: $btn-action-color;
+    background: $btn-action-bg;
+    border-color: $btn-action-border;
+}
+
+.btn-action {
+    @extend %btn-action;
+}

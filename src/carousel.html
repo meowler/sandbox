@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+
+    <script src="js/app.support.min.js"></script>
+    <script src="js/app.min.js"></script>        
+
+    <title>carousel</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div id="slick">
+          <div>
+            <div class="img--holder" style="background-image: url(http://placehold.it/1920x1080);"></div>
+          </div>
+          <div>
+            <div class="img--holder" style="background-image: url(http://placehold.it/1920x1080/849695/ffffff);"></div>
+          </div>
+          <div>
+            <div class="img--holder" style="background-image: url(http://placehold.it/1920x1080/978298/000000);"></div>
+          </div>
+      </div>
+      <!-- /#slick -->
+    </div>
+    <!-- /.container -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {             
+            $(".carousel").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3500,
+                infinite: true,
+                fade: true,
+                pauseOnHover: true,
+                arrows: false,
+                slidesToScroll: 1
+            });
+            
+            $(".menu-icon").click(function() {
+               $(this).toggleClass('open');
+            });
+            
+            $(".menu-icon").click(function() {
+               $(".menu-overlay").toggleClass('open');
+            });
+            
+        });
+    </script>        
+            
+
+</body>
+
+</html>

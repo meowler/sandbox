@@ -1,0 +1,141 @@
+// TYPOGRAPHY
+$font-size-base: 14px;
+$font-ratio: .15;
+
+$header-margin: 1em;
+
+$font-size-h1: font-calc-em(6);
+$font-size-h2: font-calc-em(5);
+$font-size-h3: font-calc-em(4);
+$font-size-h4: font-calc-em(3);
+$font-size-h5: font-calc-em(2);
+$font-size-h6: font-calc-em(1);
+
+// COLORS 
+$brand-primary: #00908F;
+$brand-primary-light: #6fcaf2;
+$brand-primary-dark: #103e50;
+
+$blue-background-dark: #103e50;
+
+$brand-secondary: #ffcb58;
+$brand-secondary-light: lighten ($brand-secondary, 10%);
+$brand-secondary-dark: #ffcb58;
+
+$brand-yellow: #FCDD0E;
+$brand-yellow-cta: #2d87ba;
+$brand-red: #cc0000;
+
+$gray-light-bg: #E4E4E4;
+$gray-light: #DCDCDC;
+$gray-medium: #313336;
+$gray-dark: #202123;
+
+$white-bg: #FFFFFF;
+
+// MISC
+$margin: .25em;
+$padding: 15px;
+$border-radius: 0;
+
+// Breadcrumbs
+
+$breadcrumb-padding-vertical:   .5em;
+$breadcrumb-padding-horizontal: .5em;
+//** Breadcrumb background color
+$breadcrumb-bg:                 none;
+//** Breadcrumb text color
+$breadcrumb-color:              black;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       black;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          ">";
+
+// NAVIGATION
+$nav-link-hover-bg: white;
+$header-min-mobile: 50px;
+$header-min-desktop: 80px;
+
+// DROPDOWN
+$dropdown-link-active-bg: #EEEEEE;
+
+// BUTTON
+$btn-font-weight: 600;
+$btn-font-family: 'FlamaCondensed', san-serif;
+$btn-primary-bg: rgba(0,0,0,0);
+$btn-primary-color: $gray-dark;
+$btn-primary-border: $gray-dark;
+$btn-blue-bg: rgba(0,0,0,0);
+$btn-blue-color: $brand-primary;
+$btn-blue-border: $brand-primary;
+$btn-action-bg: $brand-yellow-cta;
+$btn-action-color: white;
+$btn-action-border: $brand-yellow-cta;
+$btn-blue-fill-bg: $brand-primary;
+$btn-blue-fill-color: #FFFFFF;
+$btn-blue-fill-border: white;
+$btn-default-bg: rgba(0,0,0,0);
+$btn-default-color: #FFFFFF;
+$btn-default-border: #FFFFFF;
+
+%link {
+    font-family: 'FlamaCondensed', san-serif;
+    font-size: 1.125em;
+    text-transform: uppercase;
+}
+
+%link-info {
+    color: $gray-dark;
+    
+}
+
+%link-action {
+    color: $brand-primary;
+}
+
+
+// TABLE
+$border-color: #DDDDDD;
+
+// FOOTER
+$footer-separator:          "|";
+
+
+
+
+$actualize:
+    //alerts, 
+    //badges, 
+    //breadcrumbs, 
+    //buttons, 
+    //carousel, 
+    //close, 
+    //code, 
+    //component-animations, 
+    //dropdowns, 
+    //forms, 
+    //glyphicons, 
+    //grid, 
+    //input-groups, 
+    //jumbotron, 
+    //labels, 
+    //list-group, 
+    //media, 
+    //modals, 
+    navbar, 
+    navs, 
+    //pager, 
+    //pagination, 
+    //panels, 
+    //popovers, 
+    //progress-bars, 
+    //responsive-embed, 
+    //responsive-utilities, 
+    //scaffolding, 
+    //tables, 
+    //thumbnails, 
+    //tooltip, 
+    //type, 
+    //utilities, 
+    //wells,
+    end;

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+
+    <script src="js/app.support.min.js"></script>
+    <script src="js/app.min.js"></script>        
+
+    <title>test</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+    
+    <div class="container">
+    
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <div><img alt="Lindsey Fowler Logo" src="images/lindsey-fowler-logo.svg"></div>Lindsey Fowler 
+                </a>
+            </div>
+            
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    
+        <div class="wrapper carousel">
+            <div class="background" style="background-image: url('images/carousel/lindseyFowler_moodboard.jpg');"></div>
+            <div class="background" style="background-image: url('images/carousel/street.jpg');"></div>
+            <div class="background" style="background-image: url('images/carousel/canal-day.jpg');"></div>
+        </div>
+    </div>
+    
+    
+    <div class="menu-overlay">
+        <ul>
+            <li><a href="#">Home</a></li>                      
+            <li><a href="#">Work</a></li>                      
+            <li><a href="#">About</a></li>     
+        </ul>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {             
+            $(".carousel").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3500,
+                infinite: true,
+                fade: true,
+                pauseOnHover: true,
+                arrows: false,
+                slidesToScroll: 1
+            });
+            
+            $(".menu-icon").click(function() {
+               $(this).toggleClass('open');
+            });
+            
+            $(".menu-icon").click(function() {
+               $(".menu-overlay").toggleClass('open');
+            });
+            
+            
+            $(window).load(function() {
+                $(".background").height($(window).height());
+            });
+
+            $(window).resize(function() {
+                $(".background").height($(window).height());
+            });
+        });
+    </script>        
+            
+
+</body>
+</html>
