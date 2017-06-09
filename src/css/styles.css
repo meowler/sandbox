@@ -443,7 +443,7 @@ main div section p {
   width: 100%; }
 
 main div {
-  margin-left: 8.33333%; }
+  padding-left: 8.33333%; }
 
 @media (min-width: 768px) {
   main div section p {
@@ -453,7 +453,7 @@ main div {
     width: 75%; }
 
   main div section p {
-    margin-left: 33.33333%; } }
+    padding-left: 33.33333%; } }
 table {
   background-color: transparent; }
 
@@ -1144,6 +1144,9 @@ tbody.collapse.in {
 
 @-ms-viewport {
   width: device-width; }
+body {
+  background: #FCDD0E; }
+
 .container {
   width: 100%;
   max-width: 2500px;
