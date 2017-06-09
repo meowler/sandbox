@@ -430,30 +430,36 @@ address {
   .container-fluid:after {
     clear: both; }
 
-main div section p, main div section p {
+main section:nth-of-type(3) .background, main section p, main section p, main section p:nth-of-type(2) {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-main div section p {
+main section p {
   float: left; }
 
-main div section p {
+main section p {
   width: 100%; }
 
-main div {
+main section {
   padding-left: 8.33333%; }
 
 @media (min-width: 768px) {
-  main div section p {
+  main section:nth-of-type(3) .background, main section p, main section p:nth-of-type(2) {
     float: left; }
 
-  main div section p {
+  main section:nth-of-type(3) .background, main section p {
     width: 75%; }
 
-  main div section p {
-    padding-left: 33.33333%; } }
+  main section p:nth-of-type(2) {
+    width: 100%; }
+
+  main section:nth-of-type(2), main section p {
+    padding-left: 33.33333%; }
+
+  main section p:nth-of-type(2) {
+    padding-left: 75%; } }
 table {
   background-color: transparent; }
 
@@ -1309,16 +1315,6 @@ nav {
 
 .wrapper.carousel {
   z-index: -1; }
-  .wrapper.carousel:after {
-    content: '';
-    background: #FCDD0E;
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    -webkit-transform: skewY(6deg);
-            transform: skewY(6deg); }
 
 .background {
   background-repeat: no-repeat;
@@ -1367,17 +1363,69 @@ nav {
 main {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  main div {
-    padding-right: 8.33333%; }
-    main div h1 {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
+  main section {
+    padding-right: 8.33333%;
+    z-index: 20; }
+    main section h1 {
       font-size: 10em;
       font-weight: 700;
       margin: 0; }
-    main div section p {
+    main section p {
       line-height: 1.5;
       padding-top: 2em;
       margin: 0; }
+
+.transition {
+  position: relative; }
+  .transition:before {
+    content: '';
+    background: #FCDD0E;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    -webkit-transform: skewY(6deg);
+            transform: skewY(6deg); }
+  .transition:after {
+    content: '';
+    background: #FCDD0E;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    -webkit-transform: skewY(6deg);
+            transform: skewY(6deg); }
+
+.transition-alternate {
+  position: relative; }
+  .transition-alternate:before {
+    content: '';
+    background: white;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    -webkit-transform: skewY(-6deg);
+            transform: skewY(-6deg); }
+  .transition-alternate:after {
+    content: '';
+    background: white;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    -webkit-transform: skewY(-6deg);
+            transform: skewY(-6deg); }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome

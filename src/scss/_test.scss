@@ -1,0 +1,51 @@
+.transition {
+    position: relative;
+    
+    &:before {
+        content: '';
+        background: $brand-yellow;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        bottom: -200px;
+        transform: skewY(6deg);
+    }
+    
+    &:after {
+        content: '';
+        background: $brand-yellow;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        bottom: -200px;
+        transform: skewY(6deg);
+    }
+}
+
+.transition-alternate {
+        position: relative;
+        
+        &:before {
+            content: '';
+            background: white;
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(-6deg);
+        }
+        
+        &:after {
+            content: '';
+            background: white;
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(-6deg);
+        }
+    }
