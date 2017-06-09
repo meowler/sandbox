@@ -1,0 +1,16 @@
+.parent {
+    min-height: 300px;
+    width: 100%;
+    border: 1px solid;
+    padding: 1em;
+    background-image: url('https://via.placeholder.com/350x150');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parent .child {
+    max-width: 30%;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid;
+}
