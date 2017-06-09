@@ -430,6 +430,30 @@ address {
   .container-fluid:after {
     clear: both; }
 
+main div section p, main div section p {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+main div section p {
+  float: left; }
+
+main div section p {
+  width: 100%; }
+
+main div {
+  margin-left: 8.33333%; }
+
+@media (min-width: 768px) {
+  main div section p {
+    float: left; }
+
+  main div section p {
+    width: 75%; }
+
+  main div section p {
+    margin-left: 33.33333%; } }
 table {
   background-color: transparent; }
 
@@ -1322,6 +1346,21 @@ nav {
 .slick-dots li.slick-active button:before {
   opacity: .75;
   color: white; }
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  main div {
+    padding-right: 8.33333%; }
+    main div h1 {
+      font-size: 10em;
+      font-weight: 700;
+      margin: 0; }
+    main div section p {
+      line-height: 1.5;
+      padding-top: 2em;
+      margin: 0; }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
