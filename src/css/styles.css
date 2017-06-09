@@ -1277,21 +1277,22 @@ nav {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    width: 100%;
     padding: 9em 0; }
-    .menu-overlay ul li {
-      color: #FCDD0E; }
-      .menu-overlay ul li a {
-        font-size: 5em;
-        font-weight: 700;
+    .menu-overlay ul a {
+      font-size: 5em;
+      font-weight: 700;
+      color: #FCDD0E;
+      width: 100%; }
+      .menu-overlay ul a:hover {
+        text-decoration: none;
+        color: white;
+        background: rgba(0, 0, 0, 0.1); }
+      .menu-overlay ul a:active {
+        text-decoration: none;
         color: #FCDD0E; }
-        .menu-overlay ul li a:hover {
-          text-decoration: none;
-          color: white; }
-        .menu-overlay ul li a:active {
-          text-decoration: none;
-          color: #FCDD0E; }
-        .menu-overlay ul li a:link {
-          text-decoration: none; }
+      .menu-overlay ul a:link {
+        text-decoration: none; }
 
 .menu-overlay.open {
   position: fixed;
@@ -1302,9 +1303,22 @@ nav {
 .menu-overlay.open + .container .navbar.navbar-default {
   background: transparent; }
 
-.menu-overlay.open + .container .wrapper.carousel {
+.menu-overlay.open + .container .wrapper.carousel, .menu-overlay.open + .container main {
   -webkit-filter: blur(3px);
           filter: blur(3px); }
+
+.wrapper.carousel {
+  z-index: -1; }
+  .wrapper.carousel:after {
+    content: '';
+    background: #FCDD0E;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    -webkit-transform: skewY(6deg);
+            transform: skewY(6deg); }
 
 .background {
   background-repeat: no-repeat;

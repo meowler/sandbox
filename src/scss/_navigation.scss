@@ -15,7 +15,6 @@ nav {
     align-items: center;
     margin-bottom: 0;
     
-    
     &:before {
         display: none;
     }
@@ -120,31 +119,29 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 100%;
         padding: 9em 0;
-        
-        li {
+
+        a {
+            font-size: 5em;
+            font-weight: 700;
             color: $brand-yellow;
+            width: 100%;
             
-            a {
-                font-size: 5em;
-                font-weight: 700;
-                color: $brand-yellow;
-                
-                &:hover {
-                    text-decoration: none;
-                    color: white;
-                }
-                
-                &:active {
-                    text-decoration: none;
-                    color: $brand-yellow;
-                }
-                
-                &:link {
-                    text-decoration: none;
-                }
-                
+            &:hover {
+                text-decoration: none;
+                color: white;
+                background: rgba(0, 0, 0,.1);
             }
+
+            &:active {
+                text-decoration: none;
+                color: $brand-yellow;
+            }
+
+            &:link {
+                text-decoration: none;
+            }   
         }
     }
 }
@@ -160,6 +157,6 @@ nav {
     background: transparent;
 }
 
-.menu-overlay.open + .container .wrapper.carousel {
+.menu-overlay.open + .container .wrapper.carousel, .menu-overlay.open + .container main {
     filter: blur(3px);
 }
