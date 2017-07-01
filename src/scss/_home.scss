@@ -1,12 +1,67 @@
+@include parallax-init;
+
 main {
     display: flex;
     flex-direction: column;
     position: relative;
     
+    .transition {
+        position: relative;
+        @include parallax(-.5);
+
+        &:before {
+            content: '';
+            background: $brand-yellow;
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(6deg);
+        }
+
+        &:after {
+            content: '';
+            background: $brand-yellow;
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(6deg);
+        }
+    }
+
+    .transition-alternate {
+        position: relative;
+        &:before {
+            content: '';
+            background: rgba(255,255,255,0.7);
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(-6deg);
+        }
+
+        &:after {
+            content: '';
+            background: rgba(255,255,255,0.7);
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            bottom: -200px;
+            transform: skewY(-6deg);
+        }
+    }
+    
+    
     section {
         @extend %col-xs-offset-1;
         padding-right: 8.33333%;
-        z-index: 20;
+        
         
         &:nth-of-type(2) {
             @extend %col-sm-offset-4;
@@ -15,6 +70,11 @@ main {
         &:nth-of-type(3) {
             .background {
                 @extend %col-sm-9;
+            }
+            
+            h1 {
+                @include parallax(-.1, 1);
+                color: teal;
             }
         }
         
@@ -39,3 +99,4 @@ main {
         }
     }    
 }
+

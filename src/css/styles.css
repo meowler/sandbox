@@ -1360,6 +1360,23 @@ nav {
   opacity: .75;
   color: white; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+body {
+  overflow: auto;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+  body, body * {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1369,9 +1386,60 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative; }
+  main .transition {
+    position: relative;
+    -webkit-transform: translateZ(-0.5px) scale(1.5);
+            transform: translateZ(-0.5px) scale(1.5);
+    z-index: -500; }
+    main .transition:before {
+      content: '';
+      background: #FCDD0E;
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+      -webkit-transform: skewY(6deg);
+              transform: skewY(6deg); }
+    main .transition:after {
+      content: '';
+      background: #FCDD0E;
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+      -webkit-transform: skewY(6deg);
+              transform: skewY(6deg); }
+  main .transition-alternate {
+    position: relative; }
+    main .transition-alternate:before {
+      content: '';
+      background: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+      -webkit-transform: skewY(-6deg);
+              transform: skewY(-6deg); }
+    main .transition-alternate:after {
+      content: '';
+      background: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+      -webkit-transform: skewY(-6deg);
+              transform: skewY(-6deg); }
   main section {
-    padding-right: 8.33333%;
-    z-index: 20; }
+    padding-right: 8.33333%; }
+    main section:nth-of-type(3) h1 {
+      -webkit-transform: translateZ(-0.1px) scale(1.1);
+              transform: translateZ(-0.1px) scale(1.1);
+      z-index: -100;
+      color: teal; }
     main section h1 {
       font-size: 10em;
       font-weight: 700;
@@ -1380,52 +1448,6 @@ main {
       line-height: 1.5;
       padding-top: 2em;
       margin: 0; }
-
-.transition {
-  position: relative; }
-  .transition:before {
-    content: '';
-    background: #FCDD0E;
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    -webkit-transform: skewY(6deg);
-            transform: skewY(6deg); }
-  .transition:after {
-    content: '';
-    background: #FCDD0E;
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    -webkit-transform: skewY(6deg);
-            transform: skewY(6deg); }
-
-.transition-alternate {
-  position: relative; }
-  .transition-alternate:before {
-    content: '';
-    background: white;
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    -webkit-transform: skewY(-6deg);
-            transform: skewY(-6deg); }
-  .transition-alternate:after {
-    content: '';
-    background: white;
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    bottom: -200px;
-    -webkit-transform: skewY(-6deg);
-            transform: skewY(-6deg); }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
