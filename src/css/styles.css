@@ -430,36 +430,6 @@ address {
   .container-fluid:after {
     clear: both; }
 
-main section:nth-of-type(3) .background, main section p, main section p, main section p:nth-of-type(2) {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-
-main section p {
-  float: left; }
-
-main section p {
-  width: 100%; }
-
-main section {
-  padding-left: 8.33333%; }
-
-@media (min-width: 768px) {
-  main section:nth-of-type(3) .background, main section p, main section p:nth-of-type(2) {
-    float: left; }
-
-  main section:nth-of-type(3) .background, main section p {
-    width: 75%; }
-
-  main section p:nth-of-type(2) {
-    width: 100%; }
-
-  main section:nth-of-type(2), main section p {
-    padding-left: 33.33333%; }
-
-  main section p:nth-of-type(2) {
-    padding-left: 75%; } }
 table {
   background-color: transparent; }
 
@@ -1313,141 +1283,58 @@ nav {
   -webkit-filter: blur(3px);
           filter: blur(3px); }
 
-.wrapper.carousel {
-  z-index: -1; }
-
-.background {
-  background-repeat: no-repeat;
-  width: 100%;
-  position: relative;
-  background-position: center;
-  background-size: cover; }
-
-.slick-dots {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  list-style: none;
-  padding: 0;
-  text-align: center; }
-  li button .slick-dots:before {
-    font-size: 10px; }
-
-.slick-dotted.slick-slider {
-  margin-bottom: 0; }
-
-.slick-dots li button:before {
-  font-size: 16px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  opacity: .5;
-  color: white; }
-
-.slick-dots li.slick-active button:before {
-  opacity: .75;
-  color: white; }
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.body-error {
+  background: white;
   overflow: hidden; }
 
-body {
-  overflow: auto;
-  -webkit-perspective: 1px;
-          perspective: 1px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
-  body, body * {
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d; }
-
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative; }
-  main .transition {
-    position: relative;
-    -webkit-transform: translateZ(-0.5px) scale(1.5);
-            transform: translateZ(-0.5px) scale(1.5);
-    z-index: -500; }
-    main .transition:before {
-      content: '';
-      background: #FCDD0E;
-      width: 100%;
-      height: 300px;
+main .wrapper-error {
+  padding: 0;
+  width: 100%; }
+  main .wrapper-error .error {
+    color: #679bc8;
+    text-align: center;
+    font-weight: regular;
+    font-family: "Lato", Helvetica, Arial, sans-serif; }
+    main .wrapper-error .error .container {
+      position: relative; }
+    main .wrapper-error .error .text-uppercase {
+      text-transform: uppercase; }
+    main .wrapper-error .error .message-container {
       position: absolute;
-      left: 0;
-      bottom: -200px;
-      -webkit-transform: skewY(6deg);
-              transform: skewY(6deg); }
-    main .transition:after {
-      content: '';
-      background: #FCDD0E;
+      width: 100%; }
+      main .wrapper-error .error .message-container div {
+        margin: 0 auto; }
+      main .wrapper-error .error .message-container h1 {
+        padding: auto;
+        font-weight: 900;
+        font-size: 7em;
+        margin-bottom: .325em; }
+      main .wrapper-error .error .message-container h3 {
+        font-weight: 800;
+        font-size: 2em; }
+      main .wrapper-error .error .message-container p {
+        font-weight: 300;
+        font-size: 1.2em;
+        margin: 0 0 3em; }
+      main .wrapper-error .error .message-container .btn {
+        color: white;
+        background: #679bc8;
+        padding: 1em 2em;
+        font-weight: 600;
+        border-radius: 4px;
+        text-decoration: none; }
+        main .wrapper-error .error .message-container .btn:hover {
+          color: #679bc8;
+          background: transparent;
+          border: 2px solid #679bc8; }
+    main .wrapper-error .error .background {
+      background-repeat: no-repeat;
       width: 100%;
-      height: 300px;
-      position: absolute;
-      left: 0;
-      bottom: -200px;
-      -webkit-transform: skewY(6deg);
-              transform: skewY(6deg); }
-  main .transition-alternate {
-    position: relative; }
-    main .transition-alternate:before {
-      content: '';
-      background: rgba(255, 255, 255, 0.7);
-      width: 100%;
-      height: 300px;
-      position: absolute;
-      left: 0;
-      bottom: -200px;
-      -webkit-transform: skewY(-6deg);
-              transform: skewY(-6deg); }
-    main .transition-alternate:after {
-      content: '';
-      background: rgba(255, 255, 255, 0.7);
-      width: 100%;
-      height: 300px;
-      position: absolute;
-      left: 0;
-      bottom: -200px;
-      -webkit-transform: skewY(-6deg);
-              transform: skewY(-6deg); }
-  main section {
-    padding-right: 8.33333%; }
-    main section:nth-of-type(3) h1 {
-      -webkit-transform: translateZ(-0.1px) scale(1.1);
-              transform: translateZ(-0.1px) scale(1.1);
-      z-index: -100;
-      color: teal; }
-    main section h1 {
-      font-size: 10em;
-      font-weight: 700;
-      margin: 0; }
-    main section p {
-      line-height: 1.5;
-      padding-top: 2em;
-      margin: 0; }
+      height: 583px;
+      padding-top: 5em;
+      background-position: center 50%;
+      background-size: cover;
+      position: absolute; }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -1467,26 +1354,4 @@ main {
   font-style: normal; }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-.slick-dots li button:before {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  padding-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f096"; }
-
-.slick-dots li.slick-active button:before {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  padding-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f0c8"; }
-
 /* Font awesome alias using after instead of before */
