@@ -1,0 +1,86 @@
+// TYPOGRAPHY
+$font-stack: 'Lato', Helvetica, Arial, sans-serif;
+
+.body-error {
+    background: white;
+    overflow: hidden;
+}
+
+main {
+    
+    .wrapper-error {
+        padding: 0;
+        width: 100%;        
+    
+        .error {
+            color: #679bc8;
+            text-align: center;
+            font: {
+                weight: regular;
+                family: $font-stack;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .text-uppercase {
+                text-transform: uppercase;
+            }
+            
+            .message-container {
+                position: absolute;
+                width: 100%;
+            
+                div {
+                    margin: 0 auto;
+                }
+                
+                h1 {
+                padding: auto;
+                font-weight: 900;
+                font-size: 7em;
+                margin-bottom: .325em;
+                } 
+
+                h3 {
+                    font-weight: 800;
+                    font-size: 2em;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.2em;
+                    margin: 0 0 3em
+                }
+
+                .btn {
+                    color: white;
+                    background: #679bc8;
+                    padding: 1em 2em;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #679bc8;
+                        background: transparent;
+                        border: 2px solid #679bc8;
+                    }
+                }
+                
+            }
+            
+            .background {
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 583px;
+                padding-top: 5em;
+                background-position: center 50%;
+                background-size: cover;
+                position: absolute
+            }
+        }
+    }   
+}
+    
