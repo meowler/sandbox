@@ -30,6 +30,17 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        cssmin: {
+          target: {
+            files: [{
+              expand: true,
+              cwd: csspath,
+              src: ['*.css', '!*.min.css'],
+              dest: csspath,
+              ext: '.min.css'
+            }]
+          }
+        },
         watch: {
             styles: {
                 files: [sasspath + '**/*.scss'],
@@ -40,5 +51,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin'); 
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default',['sass', 'autoprefixer', 'watch']);
 };

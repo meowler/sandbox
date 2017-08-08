@@ -1,0 +1,63 @@
+.site-header {
+  position: fixed;
+  overflow: hidden;
+  
+  &::after {
+    background: rgba(white,.5);
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 4;
+  }
+}
+.site-title, .site-menu {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  font-weight: bold;
+  clear: none;
+  display: inline-block;
+  vertical-align: bottom;
+  width: intrinsic;
+  z-index: 5;
+}
+.site-title {
+  font-size: 1.3em;
+}
+.site-menu {
+  left: auto;
+  right: 1em;
+  font-weight: normal;
+  a {
+    font-size: .75em;
+    color: #444;
+    text-decoration: none;
+    padding: .25em .5em;
+  }
+}
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+.article-header {
+  position: relative;
+}
+.article-title {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  font-size: 4.5em;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0,0,0,.75);
+  text-align: center;
+}
+.article-content {
+  padding: 1em;
+  max-width: 30em;
+  margin: 0 auto;
+  p {
+    margin-bottom: 1em;
+  }
+}

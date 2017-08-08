@@ -1,0 +1,31 @@
+.clean {
+    background: white;
+    
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr;
+        grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+    }
+    
+    .masthead {
+        grid-column: span 8;
+        grid-row: span 1;
+    }
+    
+    .main-content {
+        background: cyan;
+    }
+    
+    .sidebar {
+        background: magenta;
+    }
+    
+    .twin{
+        
+        &:last-of-type {
+            background: black;
+        }
+    }
+    
+}
+

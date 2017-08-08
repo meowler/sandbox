@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/app.support.min.js"></script>
+    <script src="js/app.min.js"></script>        
+
+    <title>test</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+    
+    <div class="menu-overlay">
+        <ul>
+            <a href="#"><li>Home</li></a>                      
+            <a href="#"><li>Work</li></a>                      
+            <a href="#"><li>About</li></a>     
+        </ul>
+    </div>
+    
+    <div class="container">
+    
+        <nav class="navbar navbar-default">
+            <div class="wrapper">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <div><img alt="Lindsey Fowler Logo" src="images/lindsey-fowler-logo.svg"></div>Lindsey Fowler 
+                    </a>
+                </div>
+
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <main class="wrapper project">
+                
+            <section>
+                <div class="cover-image"><img src="images/lucky-duck/logo-application.png" /></div>
+                <ul>
+                    <li class="title">Lucky Duck</li>
+                    <li class="project-count">01</li>
+                    <li class="description">
+                        The design brief for Lucky Duck provided a vague description of a kid’s clothing store located in Brooklyn, New York.
+                        There were many unknowns but the first objective was to create the logo. 
+                        I was challenged with infinite solutions to illustrate “duck”. 
+                        I discovered by representing the logo with an egg made from fabric and thread aligns with Lucky Duck being an apparel store for children. 
+                        The final egg is made from soft felt and sewn with red thread using a blanket stitch.</li>
+                </ul>
+            </section>
+            
+        </main>
+        
+        
+        <div class="footer">
+            <div class="wrapper">
+                <div>
+                    <ul>
+                        <li class="section-title">Contact</li>
+                        <li>Lindsey Fowler</li>
+                        <li>Phone: 203.939.5871</li>
+                        <li>Email: lindsey@lindseyfowler.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="section-title">Social</li>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul>
+                        <a href="#"><li>Home</li></a>                      
+                        <a href="#"><li>Work</li></a>                      
+                        <a href="#"><li>About</li></a>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    <script>
+        $( document ).ready(function() {             
+            $(".carousel").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3500,
+                infinite: true,
+                fade: true,
+                pauseOnHover: true,
+                arrows: false,
+                slidesToScroll: 1
+            });
+            
+            $(".menu-icon").click(function() {
+               $(this).toggleClass('open');
+            });
+            
+            $(".menu-icon").click(function() {
+               $(".menu-overlay").toggleClass('open');
+            });
+            
+            
+            var height= $("nav").height();
+            $("main").css({marginTop: height});
+            
+            $(window).load(function() {
+                $(".background").height($(window).height());
+            });
+
+            $(window).resize(function() {
+                $(".background").height($(window).height());
+            });
+        });
+    </script>        
+            
+
+</body>
+</html>

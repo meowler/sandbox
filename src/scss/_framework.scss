@@ -1,5 +1,6 @@
 body {
     background: $brand-yellow;
+    overflow-x: hidden;
 }
 
 .container {
@@ -8,17 +9,22 @@ body {
     margin: 0 auto;
     padding: 0;
     position: relative;
- 
-    &:before {
-        display: none;
-    }
-
-    &:after {
-        display: none;
-    }
 }
 
 .wrapper {
-    padding: 0;
+    padding: 1em;
     width: 100%;
+    
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    
+    .wrapper {
+        padding: 1em 5em;
+    }
 }

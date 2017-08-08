@@ -1,12 +1,17 @@
 @import "variables";
 @import "bootstrap";
+@import "typography";
 @import "parallax";
 @import "framework";
 @import "navigation";
-//@import "carousel";
-//@import "home";
-@import "test";
-@import "error";
+@import "carousel";
+@import "home";
+@import "projects";
+@import "projects/lucky-duck";
+@import "footer";
 
 @import "glyphs";
+
 //@import "buttons";
+//@import "test";
+//@import "clean";

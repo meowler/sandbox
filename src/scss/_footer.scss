@@ -1,0 +1,29 @@
+.footer {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            
+            .section-title {
+                font-weight: 900;
+            }
+            
+        }
+        
+        .links ul {
+            display: inline-block;
+        }
+        
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    
+    .footer .wrapper {
+        flex-direction: row;
+    }
+}
